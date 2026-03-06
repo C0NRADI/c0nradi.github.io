@@ -1,1 +1,3 @@
-# c0nradi.github.io
+# Hei, dette er min portefølje.
+
+
