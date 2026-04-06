@@ -11,37 +11,21 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #ffffff;
-      --bg-secondary: #f7f6f3;
-      --text: #1a1a18;
-      --text-secondary: #5a5a55;
-      --text-tertiary: #8a8a84;
-      --border: rgba(30,30,25,0.12);
-      --border-mid: rgba(30,30,25,0.22);
-      --success-bg: #eaf3de;
-      --success-text: #3b6d11;
-      --info-bg: #e6f1fb;
-      --info-text: #185fa5;
-      --warn-bg: #faeeda;
-      --warn-text: #854f0b;
-    }
+      --bg:            #f5f0e8;
+      --bg-secondary:  #ede7da;
+      --text:          #7a2e0a;
+      --text-secondary:#9e4a1a;
+      --text-tertiary: #b8784a;
+      --border:        rgba(122,46,10,0.15);
+      --border-mid:    rgba(122,46,10,0.28);
+      --accent:        #8b3510;
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #1c1c1a;
-        --bg-secondary: #242422;
-        --text: #f0ede6;
-        --text-secondary: #9e9e96;
-        --text-tertiary: #6a6a63;
-        --border: rgba(240,237,230,0.1);
-        --border-mid: rgba(240,237,230,0.2);
-        --success-bg: #173404;
-        --success-text: #c0dd97;
-        --info-bg: #042c53;
-        --info-text: #b5d4f4;
-        --warn-bg: #412402;
-        --warn-text: #fac775;
-      }
+      --success-bg:    #e8f0d8;
+      --success-text:  #4a6b18;
+      --info-bg:       #e2ecf5;
+      --info-text:     #1a5080;
+      --warn-bg:       #f5e8d0;
+      --warn-text:     #7a4a10;
     }
 
     html { scroll-behavior: smooth; }
@@ -67,15 +51,15 @@
       justify-content: space-between;
       align-items: center;
       padding: 1.25rem 0 2rem;
-      border-bottom: 0.5px solid var(--border);
+      border-bottom: 0.5px solid var(--border-mid);
     }
-    .nav-name { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.04em; }
+    .nav-name { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.05em; color: var(--accent); }
     .nav-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
     .nav-links a {
       font-size: 0.82rem;
       color: var(--text-secondary);
       text-decoration: none;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.04em;
       transition: color 0.15s;
     }
     .nav-links a:hover { color: var(--text); }
@@ -83,12 +67,12 @@
     /* ── Hero ── */
     .hero {
       padding: 3.5rem 0 3rem;
-      border-bottom: 0.5px solid var(--border);
+      border-bottom: 0.5px solid var(--border-mid);
       margin-bottom: 3.5rem;
     }
     .hero-eyebrow {
       font-size: 11px;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--text-tertiary);
       margin-bottom: 1.1rem;
@@ -99,6 +83,7 @@
       font-weight: 400;
       line-height: 1.1;
       margin-bottom: 1.25rem;
+      color: var(--accent);
     }
     .hero h1 em { font-style: italic; color: var(--text-secondary); }
     .hero-desc {
@@ -116,18 +101,19 @@
       border-radius: 999px;
       color: var(--text-secondary);
       letter-spacing: 0.04em;
+      background: transparent;
     }
 
     /* ── Sections ── */
     .section { margin-bottom: 3.5rem; }
     .section-label {
       font-size: 11px;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--text-tertiary);
       margin-bottom: 1.25rem;
       padding-bottom: 0.6rem;
-      border-bottom: 0.5px solid var(--border);
+      border-bottom: 0.5px solid var(--border-mid);
     }
 
     /* ── Projects ── */
@@ -147,6 +133,7 @@
       font-family: 'DM Serif Display', serif;
       font-size: 1.15rem;
       font-weight: 400;
+      color: var(--accent);
     }
     .project-year { font-size: 12px; color: var(--text-tertiary); white-space: nowrap; padding-top: 4px; }
     .project-desc {
@@ -166,15 +153,15 @@
     .project-tag {
       font-size: 11px;
       padding: 3px 10px;
-      border: 0.5px solid var(--border);
+      border: 0.5px solid var(--border-mid);
       border-radius: 4px;
       color: var(--text-tertiary);
     }
     .project-link {
       font-size: 12px;
-      color: var(--info-text);
+      color: var(--accent);
       text-decoration: none;
-      border: 0.5px solid var(--info-text);
+      border: 0.5px solid var(--accent);
       border-radius: 4px;
       padding: 4px 12px;
       white-space: nowrap;
@@ -193,7 +180,7 @@
       align-items: start;
     }
     .edu-card:last-child { border-bottom: none; }
-    .edu-degree { font-size: 0.95rem; font-weight: 500; margin-bottom: 3px; }
+    .edu-degree { font-size: 0.95rem; font-weight: 500; color: var(--text); margin-bottom: 3px; }
     .edu-institution { font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 5px; }
     .edu-desc { font-size: 0.85rem; color: var(--text-tertiary); line-height: 1.6; }
     .edu-year { font-size: 12px; color: var(--text-tertiary); white-space: nowrap; padding-top: 3px; }
@@ -208,8 +195,9 @@
       background: var(--bg-secondary);
       border-radius: 8px;
       padding: 1rem 1.15rem;
+      border: 0.5px solid var(--border);
     }
-    .cert-name { font-size: 0.9rem; font-weight: 500; margin-bottom: 4px; }
+    .cert-name { font-size: 0.9rem; font-weight: 500; color: var(--text); margin-bottom: 4px; }
     .cert-issuer { font-size: 12px; color: var(--text-secondary); margin-bottom: 8px; }
     .cert-status {
       font-size: 11px;
@@ -229,7 +217,7 @@
     }
     .skill-group h4 {
       font-size: 11px;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--text-tertiary);
       margin-bottom: 0.75rem;
@@ -263,13 +251,13 @@
       padding-bottom: 1px;
       transition: color 0.15s;
     }
-    .contact-link:hover { color: var(--text); }
+    .contact-link:hover { color: var(--accent); }
 
     /* ── Footer ── */
     footer {
       margin-top: 4rem;
       padding-top: 1.5rem;
-      border-top: 0.5px solid var(--border);
+      border-top: 0.5px solid var(--border-mid);
       font-size: 12px;
       color: var(--text-tertiary);
     }
@@ -300,8 +288,8 @@
 
   <!-- ── HERO ── -->
   <div class="hero">
-    <p class="hero-eyebrow">Aspirerende GRC-analytiker</p>
-    <h1>Jørn Conradi<br><em>Styring, risiko<br>&amp; etterlevelse</em></h1>
+    <p class="hero-eyebrow">GRC-profesjonell</p>
+    <h1>Ditt Navn<br><em>Styring, risiko<br>&amp; etterlevelse</em></h1>
     <p class="hero-desc">
       Ambisiøs GRC-profesjonell med fokus på informasjonssikkerhetsstyring, risikohåndtering
       og regulatorisk etterlevelse. Opptatt av å bygge sikre og motstandsdyktige organisasjoner.
@@ -320,28 +308,29 @@
     <p class="section-label">Prosjekter &amp; case-studier</p>
 
     <!--
-      SLIK LEGGER DU TIL PDF-FIL:
-      1. Lag en mappe kalt "projects" i GitHub-repoet ditt
-      2. Last opp PDF-filen din der, f.eks. "gap-analyse.pdf"
-      3. Fjern kommentar-taggene rundt <a class="project-link"...> og oppdater filnavnet
-      4. Slett <span class="project-link-placeholder"> på samme prosjekt
+      SLIK LEGGER DU TIL PDF-LENKE:
+      1. Last opp PDF-en i "projects"-mappen i GitHub-repoet ditt
+      2. Fjern <!-- og --> rundt <a class="project-link"...> nedenfor
+      3. Bytt ut filnavnet med ditt eget
     -->
 
     <div class="project-card">
       <div class="project-header">
-        <p class="project-title">Cloud Forensics — Eksamensprosjekt år 2 Noroff</p>
+        <p class="project-title">ISO 27001 GAP-analyse — SMB case-studie</p>
         <span class="project-year">2024</span>
       </div>
       <p class="project-desc">
-        Eksamensprosjekt om hvilke verktøy som kan brukes for å finne digitale spor i Azure.
+        Gjennomførte en simulert GAP-analyse for en liten profesjonell tjenesteleverandør
+        opp mot ISO/IEC 27001:2022-kontroller. Utarbeidet en tiltaksplan med risikobaserte
+        anbefalinger prioritert etter alvorlighetsgrad.
       </p>
       <div class="project-footer">
         <div class="project-tags">
-          <span class="project-tag">Microsoft Azure</span>
-          <span class="project-tag">Azure Log Analytics</span>
-          <span class="project-tag">Autopsy</span>
+          <span class="project-tag">ISO 27001</span>
+          <span class="project-tag">GAP-analyse</span>
+          <span class="project-tag">Risikoregister</span>
         </div>
-        <a class="project-link" href="projects/Cloud Forensics Exam Project.pdf" target="_blank">Se prosjekt (PDF)</a>
+        <!-- <a class="project-link" href="projects/gap-analyse.pdf" target="_blank">Se rapport (PDF)</a> -->
       </div>
     </div>
 
@@ -416,21 +405,21 @@
       <div class="cert-card">
         <p class="cert-name">CompTIA Security+</p>
         <p class="cert-issuer">CompTIA</p>
-        <span class="cert-status planned">Planlagt</span>
-      </div>
-      <div class="cert-card">
-        <p class="cert-name">ISO 27001 Foundation</p>
-        <p class="cert-issuer">PECB</p>
-        <span class="cert-status planned">Planlagt</span>
-      </div>
-      <div class="cert-card">
-        <p class="cert-name">AZ-900 Azure Fundamentals</p>
-        <p class="cert-issuer">Microsoft</p>
         <span class="cert-status active">Aktiv</span>
       </div>
       <div class="cert-card">
-        <p class="cert-name">SC-900</p>
-        <p class="cert-issuer">Microsoft</p>
+        <p class="cert-name">ISO 27001 Foundation</p>
+        <p class="cert-issuer">PECB / BSI</p>
+        <span class="cert-status active">Aktiv</span>
+      </div>
+      <div class="cert-card">
+        <p class="cert-name">Certified in Risk &amp; Info Systems Control</p>
+        <p class="cert-issuer">ISACA — CRISC</p>
+        <span class="cert-status progress">Pågår</span>
+      </div>
+      <div class="cert-card">
+        <p class="cert-name">Certified Information Security Manager</p>
+        <p class="cert-issuer">ISACA — CISM</p>
         <span class="cert-status planned">Planlagt</span>
       </div>
     </div>
@@ -481,14 +470,14 @@
   <div class="section" id="kontakt">
     <p class="section-label">Kontakt</p>
     <div class="contact-row">
-      <a class="contact-link" href="mailto:Conradi1@proton.me">Conradi1@proton.me</a>
-      <a class="contact-link" href="https://linkedin.com/in/jconradi" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="contact-link" href="mailto:deg@epost.no">deg@epost.no</a>
+      <a class="contact-link" href="https://linkedin.com/in/dittbrukernavn" target="_blank" rel="noopener">LinkedIn</a>
       <a class="contact-link" href="https://github.com/dittbrukernavn" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
 
   <footer>
-    &copy; 2026 Jørn Conradi &mdash; GRC-portefølje
+    &copy; 2025 Ditt Navn &mdash; GRC-portefølje
   </footer>
 
 </div>
