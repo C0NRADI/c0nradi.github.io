@@ -3,10 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jørn Conradi — Portefølje</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <title>Ditt Navn — GRC-portefølje</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -26,12 +23,15 @@
       --info-text:     #1a5080;
       --warn-bg:       #f5e8d0;
       --warn-text:     #7a4a10;
+
+      --font-serif: Georgia, 'Times New Roman', serif;
+      --font-sans:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'DM Sans', sans-serif;
+      font-family: var(--font-sans);
       font-weight: 300;
       background: var(--bg);
       color: var(--text);
@@ -53,7 +53,7 @@
       padding: 1.25rem 0 2rem;
       border-bottom: 0.5px solid var(--border-mid);
     }
-    .nav-name { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.05em; color: var(--accent); }
+    .nav-name { font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; color: var(--accent); }
     .nav-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
     .nav-links a {
       font-size: 0.82rem;
@@ -78,10 +78,10 @@
       margin-bottom: 1.1rem;
     }
     .hero h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(2.4rem, 5vw, 3.4rem);
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
       font-weight: 400;
-      line-height: 1.1;
+      line-height: 1.15;
       margin-bottom: 1.25rem;
       color: var(--accent);
     }
@@ -101,7 +101,6 @@
       border-radius: 999px;
       color: var(--text-secondary);
       letter-spacing: 0.04em;
-      background: transparent;
     }
 
     /* ── Sections ── */
@@ -130,7 +129,7 @@
       margin-bottom: 0.4rem;
     }
     .project-title {
-      font-family: 'DM Serif Display', serif;
+      font-family: var(--font-serif);
       font-size: 1.15rem;
       font-weight: 400;
       color: var(--accent);
@@ -180,7 +179,7 @@
       align-items: start;
     }
     .edu-card:last-child { border-bottom: none; }
-    .edu-degree { font-size: 0.95rem; font-weight: 500; color: var(--text); margin-bottom: 3px; }
+    .edu-degree { font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 3px; }
     .edu-institution { font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 5px; }
     .edu-desc { font-size: 0.85rem; color: var(--text-tertiary); line-height: 1.6; }
     .edu-year { font-size: 12px; color: var(--text-tertiary); white-space: nowrap; padding-top: 3px; }
@@ -197,7 +196,7 @@
       padding: 1rem 1.15rem;
       border: 0.5px solid var(--border);
     }
-    .cert-name { font-size: 0.9rem; font-weight: 500; color: var(--text); margin-bottom: 4px; }
+    .cert-name { font-size: 0.9rem; font-weight: 600; color: var(--text); margin-bottom: 4px; }
     .cert-issuer { font-size: 12px; color: var(--text-secondary); margin-bottom: 8px; }
     .cert-status {
       font-size: 11px;
@@ -310,7 +309,7 @@
     <!--
       SLIK LEGGER DU TIL PDF-LENKE:
       1. Last opp PDF-en i "projects"-mappen i GitHub-repoet ditt
-      2. Fjern <!-- og --> rundt <a class="project-link"...> nedenfor
+      2. Fjern kommentartaggene rundt <a class="project-link"...>
       3. Bytt ut filnavnet med ditt eget
     -->
 
@@ -471,12 +470,13 @@
     <p class="section-label">Kontakt</p>
     <div class="contact-row">
       <a class="contact-link" href="mailto:deg@epost.no">deg@epost.no</a>
-      <a class="contact-link" href="https://linkedin.com/in/jconradi" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="contact-link" href="https://linkedin.com/in/dittbrukernavn" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="contact-link" href="https://github.com/dittbrukernavn" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
 
   <footer>
-    &copy; 2026 Jørn Conradi &mdash; Portefølje
+    &copy; 2025 Ditt Navn &mdash; GRC-portefølje
   </footer>
 
 </div>
